@@ -1,12 +1,13 @@
 {
     "basic_info": {
       "description_header": "안녕하세요",
-      "description": "👋  전 동익이에요 \n 현재 우송대학교 4학년 1학기를 재학 중에 있으며 전공은 컴공이며 \n 과는 AI빅데이터학과 입니다",
+      "description": "👋  민동익 입니다 \n 현재 우송대학교를 재학 중에 있습니다. 전공은 컴공이며 \n 과는 AI빅데이터학과 입니다. Let's Keep in Touch",
       "section_name": {
         "about": "저에 대해서",
         "projects": "프로젝트",
         "skills": "기술 스택",
-        "experience": "경험 및 이력"
+        "experience": "경험 및 이력",
+        "education" : "이수 교육"
       }
     },
     "projects": [
@@ -28,6 +29,20 @@
         ]
       },
       {
+        "company": "GIST/UN/AWS 주관 AI4Good 해커톤",
+        "title": "AI4Good GIST Hackathon",
+        "years": "03.2024",
+        "mainTech":[
+          "Python",
+          "Node.js",
+          "React.js"
+        ],
+        "technologies":[
+          "LLM Fine Tuning",
+          "AWS (Lambda, API Gateway,)"
+        ]
+      },
+      {
         "company": "퍼듀대학교 (Indianna, US)",
         "title": "학부 연구실 인턴",
         "years": "09.2023 - 12.2023",
@@ -46,3 +61,4 @@
       }
     ]
   }
+

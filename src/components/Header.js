@@ -7,8 +7,40 @@ class Header extends Component {
 
   constructor() {
     super();
-    this.state = { checked: false };
+    this.state = { 
+      checked: false,
+      visitors: null // Step 1: Add state to store the number of visitors
+    };
     this.onThemeSwitchChange = this.onThemeSwitchChange.bind(this);
+  }
+
+  async componentDidMount() {
+    await this.updateCounter(); // Step 2: Fetch the data when the component mounts
+  }
+
+  async updateCounter() {
+    // Step 3: Fetch data from the Lambda function
+    try {
+      let response = await fetch(
+        "https://5kftrnnr5h7sfazsdnclclax6a0rnevc.lambda-url.ap-northeast-2.on.aws/"
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      let data = await response.json();
+      console.log("Fetched data:", data); // Debug: Log the fetched data
+      console.log("Type of data:", typeof data); // Log the type of data
+
+      // Use the data directly as it is a number
+      const visitorsCount = Number(data);
+      if (!isNaN(visitorsCount)) {
+        this.setState({ visitors: visitorsCount }); // Store the number of visitors in state
+      } else {
+        console.error("Invalid visitors count:", data);
+      }
+    } catch (error) {
+      console.error("Error fetching visitor count:", error);
+    }
   }
 
   onThemeSwitchChange(checked) {
@@ -30,8 +62,8 @@ class Header extends Component {
       this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
     }
 
-    const HeaderTitleTypeAnimation = React.memo( () => {
-      return <Typical className="title-styles" steps={this.titles} loop={50} />
+    const HeaderTitleTypeAnimation = React.memo(() => {
+      return <Typical className="title-styles" steps={this.titles} loop={50} />;
     }, (props, prevProp) => true);
 
     return (
@@ -87,6 +119,20 @@ class Header extends Component {
                 }
                 id="icon-switch"
               />
+              {/* Step 4: Render the number of visitors */}
+              {this.state.visitors !== null && (
+                <div
+                  style={{
+                    backgroundColor: 'inherit',
+                    color: 'black',
+                    fontWeight: 'bolder',
+                    marginTop: '10px',
+                    fontSize: '1.9rem', // Increase the font size
+                  }}
+                >
+                  Visitors🙈👀: {this.state.visitors}
+                </div>
+              )}
             </div>
           </div>
         </div>

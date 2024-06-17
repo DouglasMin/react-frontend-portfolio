@@ -1,11 +1,11 @@
 {
     "basic_info": {
       "name": "Dongik (Douglas) Min",
-      "titles": [ "Front-end Developer", "Project Manager", "DevOps"],
+      "titles": [ "Front-end Developer", "AI Enthusiast", "Wanna Be DevOps"],
       "social": [
         {
           "name": "github",
-          "url": "https://github.com",
+          "url": "https://github.com/DouglasMin",
           "class": "fab fa-github"
         },
         {
@@ -15,7 +15,7 @@
         },
         {
           "name": "Linkedin",
-          "url": "https://www.instagram.com",
+          "url": "https://www.linkedin.com/in/dongik-min-b8976a273/",
           "class": "fab fa-linkedin"
         }
       ],
