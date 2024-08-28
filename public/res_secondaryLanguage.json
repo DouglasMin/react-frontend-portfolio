@@ -13,9 +13,25 @@
   ],
   "experience": [
     {
+      "company": "HireDiversity Inc. (Seoul, South Korea)",
+      "title": "Intern",
+      "years": "06.2024 - 08.2024",
+      "mainTech": [
+        "Python",
+        "Image Segmentation",
+        "OCR",
+        "Prompt Engineering"
+      ],
+      "technologies": [
+        "AWS",
+        "Open AI",
+        "HuggingFace"
+      ]
+    },
+    {
       "company": "SeAH Besteel Inc. & Woosong University",
       "title": "Project Manager / Software Engineer",
-      "years": "03.2024 - present",
+      "years": "03.2024 - 06.2024",
       "mainTech": [
         "Python",
         "Object Detection",

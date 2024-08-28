@@ -14,9 +14,25 @@
     ],
     "experience": [
       {
+        "company": "주식회사 하이어다이버시티 (서울, 대한민국)",
+        "title": "인턴",
+        "years": "06.2024 - 08.2024",
+        "mainTech": [
+          "Python",
+          "Image Segmentation",
+          "OCR",
+          "Prompt Engineering"
+        ],
+        "technologies": [
+          "AWS",
+          "Open AI",
+          "HuggingFace"
+        ]
+      },
+      {
         "company": "(주) 세아 베스트 - 우송대학교 기업 연계 캡스톤 프로젝트",
         "title": "Project Manager / 소프트웨어 엔지니어",
-        "years": "03.2024 - 현재",
+        "years": "03.2024 - 06.2024",
         "mainTech": [
           "Python",
           "Object Detection",
